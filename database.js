@@ -9,7 +9,8 @@ db.exec(`
         displayname VARCHAR(40),
         email TEXT NOT NULL UNIQUE,
         password TEXT NOT NULL,
-        pfp TEXT DEFAULT '/images/pfpdefault.jpg'
+        pfp TEXT DEFAULT '/images/pfpdefault.jpg',
+        deleted BOOLEAN DEFAULT 0
     );
     CREATE TABLE IF NOT EXISTS transactions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

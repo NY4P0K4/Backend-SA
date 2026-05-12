@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "better-sqlite3": "^12.9.0",
     "connect-livereload": "^0.6.1",
     "cors": "^2.8.6",
