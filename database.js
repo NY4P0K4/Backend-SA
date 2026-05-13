@@ -23,4 +23,9 @@ db.exec(`
     );
 `);
 
+const userColumns = db.prepare('PRAGMA table_info(users)').all().map(column => column.name);
+if (!userColumns.includes('deleted')) {
+    db.prepare('ALTER TABLE users ADD COLUMN deleted BOOLEAN DEFAULT 0').run();
+}
+
 module.exports = db;
